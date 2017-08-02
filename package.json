@@ -1,0 +1,19 @@
+{
+  "name": "twitter-clone",
+  "version": "1.0.0",
+  "description": "Building a twitter clone with graphql",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karann7/twitter-clone.git"
+  },
+  "author": "Karan Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karann7/twitter-clone/issues"
+  },
+  "homepage": "https://github.com/karann7/twitter-clone#readme"
+}
