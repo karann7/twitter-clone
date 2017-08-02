@@ -33,6 +33,7 @@
     "eslint": "^4.3.0",
     "eslint-config-equimper": "^2.2.1",
     "eslint-config-prettier": "^2.3.0",
+    "faker": "^4.1.0",
     "nodemon": "^1.11.0",
     "prettier": "^1.5.3"
   }
