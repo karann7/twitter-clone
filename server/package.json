@@ -1,0 +1,39 @@
+{
+  "name": "twitter-clone",
+  "version": "1.0.0",
+  "description": "Building a twitter clone with graphql",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev nodemon --exec babel-node src/index.js",
+    "prettier": "prettier --single-quote --print-width 80 --trailing-comma all --write 'src/**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karann7/twitter-clone.git"
+  },
+  "author": "Karan Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karann7/twitter-clone/issues"
+  },
+  "homepage": "https://github.com/karann7/twitter-clone#readme",
+  "dependencies": {
+    "apollo-server-express": "^1.0.5",
+    "body-parser": "^1.17.2",
+    "cross-env": "^5.0.2",
+    "express": "^4.15.3",
+    "graphql": "^0.10.5",
+    "graphql-tools": "^1.1.0",
+    "mongoose": "^4.11.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.3.0",
+    "eslint-config-equimper": "^2.2.1",
+    "eslint-config-prettier": "^2.3.0",
+    "nodemon": "^1.11.0",
+    "prettier": "^1.5.3"
+  }
+}
