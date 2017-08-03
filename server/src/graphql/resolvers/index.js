@@ -12,6 +12,7 @@ export default {
     createTweet: TweetResolver.createTweet,
     updateTweet: TweetResolver.updateTweet,
     deleteTweet: TweetResolver.deleteTweet,
-    signup: UserResolver.signup
+    signup: UserResolver.signup,
+    login: UserResolver.login,
   }
 };

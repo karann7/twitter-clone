@@ -19,6 +19,7 @@
   "homepage": "https://github.com/karann7/twitter-clone#readme",
   "dependencies": {
     "apollo-server-express": "^1.0.5",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.17.2",
     "cross-env": "^5.0.2",
     "express": "^4.15.3",
