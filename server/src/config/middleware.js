@@ -4,13 +4,30 @@ import { graphiqlExpress, graphqlExpress } from 'apollo-server-express';
 import constants from './constants';
 import typeDefs from '../graphql/schema';
 import resolvers from '../graphql/resolvers';
+import { decodeToken } from '../services/auth';
 
-export default app => {
-  const schema = makeExecutableSchema({
+const schema = makeExecutableSchema({
   typeDefs,
   resolvers,
 });
+
+async function auth(req, res, next) {
+  try {
+    const token = req.headers.authorization;
+    if (token != null ) {
+      const user = await decodeToken(token);
+      req.user = user;
+    } else {
+      req.user = null ;
+    }
+    return next();
+  } catch (error) {
+    throw error;
+  } 
+}
+export default app => {
   app.use(bodyParser.json());
+  app.use(auth);
   app.use(
     '/graphiql',
     graphiqlExpress({
@@ -20,8 +37,11 @@ export default app => {
 
   app.use(
     constants.GRAPHQL_PATH,
-    graphqlExpress({
+    graphqlExpress(req => ({
       schema,
-    }),
+      context: {
+        user: req.user
+      }
+    })),
   );
 }
